@@ -6,24 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Magnólia virágbolt</title>
     <link rel="icon" href="kepek/logo/korlogojo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<!--Playfair display-->
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-Baskervville
+    
+    <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">-->
-<!--Alex Bush-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Baskervville:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
-        <!--<img src="kepek/logo/korlogojo.png" alt="A virágbolt logója" width="60px" class="logo">-->
-        <a href="#"><h1 id="nev">Magnólia virágbolt</h1></a>
+        <a href="index.html"><h1 id="nev">Magnólia virágbolt</h1></a>
    
     <nav>
         <ul>
@@ -55,7 +47,8 @@ Baskervville
         <p>Rendelje meg kedvenc virágait egyszerűen, online! Akár ajándékba, akár saját örömére, nálunk megtalálja a tökéletes virágot.</p>
         <h3>Útmutató az online rendeléshez</h3>
         <p>Először töltse ki az adatait, majd válasszon megfelelő kiszállítást. Boltban átvétel esetén zuglói üzletünkben tudja csokrát átvenni. Válasszon ki egy alapméretet, majd csokorfajtát. Végül pedig adja meg a kívánt kiegészítőket, és látni fogja a csokor végső árát.</p>
-        <h2 class="araink">Áraink:</h2>
+
+        <h2 class="cimkozep">Áraink:</h2>
 
         <div class="container">
         
@@ -122,38 +115,56 @@ Baskervville
             <li>Masni a csokor köré: 200 Ft</li>
             <li>Kabala maci: 900 Ft</li>
             <li>Héliumos lufi: 800 Ft</li>
-        </ul></div>
+        </ul></p></div>
     </div>
-    </p>
-    </article>
 
-    <div class="urlap">
-    <h3>Add le rendelésed gyorsan és egyszerűen:</h3>
+    </article>
+    
+<h2 class="cimkozep">Add le rendelésed gyorsan és egyszerűen:</h2>
+
+
 
 <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
 
+<div class="urlap">
+
+<div class="adatok">
     <p><label>
-        Milyen névre rendeled a csokrot?
+        <span class="felkover">Milyen névre rendeled a csokrot?</span><br>
         <input type="text" size="20px" name="nev">
     </label></p>
    
     <p><label>
-        Mikorra készítsük el a csokrod?
+        <span class="felkover">Mikorra készítsük el a csokrod?</span><br>
         <input type="date" name="datum">
     </label></p>
 
-    <p>Hova kéred a csokrot?<br>
+    <p><label>
+        <span class="felkover">Telefonszámod:</span><br>
+        <input type="tel" name="telszam" size="20px">
+    </label></p>
+
+    <p><label>
+        <span class="felkover">E-mail címed:</span><br>
+        <input type="email" name="emailcim" size="20px">
+    </label></p>
+
+    <p><span class="felkover">Hova kéred a csokrot?</span><br>
         <label><input type="radio" name="szallitas" value="boltban">Boltban átveszem</label><br>
         <label><input type="radio" name="szallitas" value="hazhoz" id="hazhozszall">Házhozszállítást kérek (+1200Ft)
         </label>
     </p>
 
     <p><label>
-        <span class="felkover">Házhozszállítás esetén cím:</span> <input type="text" size="20" name="cim">
+        <span class="felkover">Házhozszállítás esetén cím:</span><br>
+        <input type="text" size="20" name="cim">
     </label></p>
+</div>
 
+
+<div class="csokoradatok">
     <p><label>
-        Milyen csokorméretet szeretnél?
+        <span class="felkover">Milyen csokorméretet szeretnél?</span>
         <select name="meret" id="meretfajta">
             <option value="s">S (1000 Ft)</option>
             <option value="m">M (1400 Ft)</option>
@@ -163,7 +174,7 @@ Baskervville
     </label></p>
 
     <p><label>
-        Milyen fajta csokrot szeretnél?
+        <span class="felkover">Milyen fajta csokrot szeretnél?</span>
         <select name="csokor" id="csokorfajta">
             <option value="alap">-- Válassz egyet --</option>
             <option value="1">Klasszikus romatnikus csokor</option>
@@ -178,7 +189,7 @@ Baskervville
     <img src="" alt="Választott csokorfajta kép" id="valasztottkep">
 
     <p><label>
-        Milyen csomagolót szeretnél?
+        <span class="felkover">Milyen csomagolót szeretnél?</span>
         <select name="csomag" id="csomagolo">
            <option value="p">Egyszerű papírcsomagoló</option>
             <option value="s">Elegáns selyempapír</option>
@@ -187,30 +198,32 @@ Baskervville
     </label></p>
 
     <p><label>
-        Milyen színű szallaggal szeretnéd megkötni a virágod?
+        <span class="felkover">Milyen színű szallaggal szeretnéd megkötni a virágod?</span>
         <input type="color">
     </label></p>
 
     <p>
-        Milyen díszt szeretnél a csokrodba vagy a csokrod mellé?<br>
+        <span class="felkover">Milyen díszt szeretnél a csokrodba vagy a csokrod mellé?</span><br>
         <label><input type="checkbox" name="fel" id="felirat">Felirat<br></label>
         <label><input type="checkbox" name="mas" id="masni">Masni<br></label>
         <label><input type="checkbox" name="mac" id="maci">Kabala maci<br></label>
         <label><input type="checkbox" name="luf" id="lufi">Héliumos lufi</label>
     </p>
 
+
     <p>
         Fizetendő összeg:
         <span id="fizetendo"></span>
-        <input type="button" value="Számold ki!" id="szamoldki">
+        <input type="button" value="Számold ki!" id="szamoldki" class="gomb">
     </p>
 
-    <input type="submit" value="Beküldés">
-    <input type="reset" value="Visszaállítás alapértékre">
-    
+    <input type="submit" value="Beküldés" class="gomb">
+    <input type="reset" value="Visszaállítás alapértékre" class="gomb">
+</div>
+</div>   
 </form>
     
-</div>
+
 
     <footer>
         <p>Az oldal nem valóságos, tanulmányi célú</p>
@@ -221,18 +234,3 @@ Baskervville
 </body>
 </html>
 
-
-
-    <!--<p>
-        Milyen virágokat szeretnél?<br>
-        <label><input type="checkbox" name="1">Tulipán</label><br>
-        <label> <input type="checkbox" name="2">Rózsa</label><br>
-        <label><input type="checkbox" name="3">Liliom</label><br>
-        <label><input type="checkbox" name="4">Szegfű</label><br>
-        <label><input type="checkbox" name="5">Gerbera</label><br>
-        <label><input type="checkbox" name="6">Krizantén</label><br>
-        <label><input type="checkbox" name="7">Pünkösdi rózsa (prémium)</label><br>
-        <label><input type="checkbox" name="8">Kála (prémium)</label><br>
-        <label><input type="checkbox" name="9">Hortenzia (prémium)</label><br>
-        <label><input type="checkbox" name="10">Orchidea (prémium)</label><br>
-    </p>-->

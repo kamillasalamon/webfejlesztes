@@ -1,7 +1,11 @@
+//Hamburgermenü
+
+//document.getElementById("hamburger-icon").addEventListener("click",hamburgermenu(this))
 function hamburgermenu(menu) {
     menu.classList.toggle('open');
 }
 
+//Fizetendő kiszámolása
 document.getElementById("szamoldki").addEventListener("click",arszamolo)
 function arszamolo(){
     let a=0
@@ -57,8 +61,7 @@ function arszamolo(){
 }
 
 
-
-
+//Kép mutatása
 document.getElementById("csokorfajta").addEventListener("change",csokormutat)
 
 
@@ -71,8 +74,7 @@ function csokormutat(){
         2: "kepek/vidam.jpg",
         3: "kepek/napraforgo.jpg",
         4: "kepek/eskuvoi.jpg",
-        5: "kepek/modern.jpg"
-    
+        5: "kepek/modern.jpg"  
     }
 
     const valasztott=document.getElementById("csokorfajta").value

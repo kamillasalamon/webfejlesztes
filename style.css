@@ -1,214 +1,214 @@
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html{
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(241, 241, 185);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(241, 241, 185);
+  font-family: "Cormorant Garamond", serif;
+  
+  color:rgb(57, 78, 7);
 }
 
 /*Címsor */
 
 header{
-    margin: 0;
-    padding: 0 ;
-    border-bottom: 2px solid pink;
-    background-color: rgb(57, 78, 7);
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
+  margin: 0;
+  padding: 0 ;
+  border-bottom: 2px solid pink;
+  background-color: rgb(57, 78, 7);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
 }
 
 header a{
-  text-decoration: none;
-  color: pink;
+text-decoration: none;
+color: pink;
 }
 
 #nev{
-  /*bold, size */
-  display: flex;
-  align-items: center;
-  font-family: "Playfair Display",serif;
-  font-weight: 900;
+display: flex;
+align-items: center;
+font-family: "Playfair Display",serif;
+font-weight: 900;
 }
 
 
 /*Hamburger icon*/
- #hamburger-icon {
-  margin: auto 0;
-  display: block;
-  cursor: pointer;
- }
+#hamburger-icon {
+margin: auto 0;
+display: block;
+cursor: pointer;
+}
 
- #hamburger-icon div {
-  width: 35px;
-  height: 3px;
-  background-color: pink;
-  margin: 6px 0;
-  transition: 0.4s;
+#hamburger-icon div {
+width: 35px;
+height: 3px;
+background-color: pink;
+margin: 6px 0;
+transition: 0.4s;
 }
 
 /*Mobil nézet menü */
 .mobilmenu {
-  display: none;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  height: calc(100vh - 100px);
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: rgba(57, 78, 7,0.9);
-  /*clip-path: insert(0px 0px 120px 0px);
-  overflow: hidden;*/
+display: none;
+position: absolute;
+top: 100px;
+left: 0;
+height: calc(100vh - 100px);
+width: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+background-color: rgba(57, 78, 7,0.9);
 }
 
 .mobilmenu{
-  margin:0;
+margin:0;
 }
 .mobilmenu li {
-  margin-bottom: 10px;
-  list-style: none;
+margin-bottom: 10px;
+list-style: none;
 }
 .mobilmenu a {
-  color: white;
-  font-family: "Playfair Display";
-  text-decoration: none;
+color: white;
+font-family: "Playfair Display";
+text-decoration: none;
 }
 .mobilmenu a:hover {
-  color: pink;
-  text-decoration: none;
+color: pink;
+text-decoration: none;
 }
 .mobilmenu li:hover{
-  transform: scale(1.1);
-  transition: 0.3s;
+transform: scale(1.1);
+transition: 0.3s;
 }
 .open .mobilmenu {
-  display: flex;
+display: flex;
 }
 .open .bar1 {
-  transform: rotate(-45deg) translate(-6px, 6px);
+transform: rotate(-45deg) translate(-6px, 6px);
 }
 .open .bar2 {
-  opacity: 0;
+opacity: 0;
 }
 .open .bar3 {
-  transform: rotate(45deg) translate(-6px, -8px);
+transform: rotate(45deg) translate(-6px, -8px);
 }
 
 /*Navigator*/
 
 header nav{
-  display: none;
+display: none;
 }
 
 .current{
-  padding-bottom: 2px;
-  border-bottom: 1px solid white;
+padding-bottom: 2px;
+border-bottom: 1px solid white;
 }
 
 
 /*Parallax képek */
 .parallax1{
-  background-image: url(kepek/pink-2566548.jpg);
-  height: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  border-radius: 20px;
-  margin: 10px;
+background-image: url(kepek/pink-2566548.jpg);
+height: 300px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size:cover;
+border-radius: 20px;
+margin: 10px;
 
 }
 
 .parallax2{
-  background-image: url(kepek/wedding-bouquet-7185333.jpg);
-  flex: 1 1 100%;
-  height: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  border-radius: 20px;
-  margin: 10px;
+background-image: url(kepek/wedding-bouquet-7185333.jpg);
+flex: 1 1 100%;
+height: 300px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size:cover;
+border-radius: 20px;
+margin: 10px;
 
 }
 
 /*Container*/
 .container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 
 }
 
 /*Címsorok */
 h2, h3{
-  font-family: "Playfair Display",serif;
-  font-weight: 900;
+font-family: "Playfair Display",serif;
+font-weight: 900;
 }
 
 /* Idézet */
 #idezet{
-  background-color: pink;
-  font-family: "Alex Brush", cursive;
-  flex: 1 1 100%;
-  margin: 0;
-  font-size: 27px;
-  text-align: center;
+color:rgb(57, 78, 7);
+font-family: "Alex Brush", cursive;
+flex: 1 1 100%;
+margin: 0;
+font-size: 27px;
+text-align: center;
 }
+
 
 /*Virágválaszték */
 .viragvalasztek{
-  background-color: rgb(253, 219, 225);
-  color: rgb(107, 28, 41);
+background-color: rgb(253, 219, 225);
+color: rgb(107, 28, 41);
+font-family: "Baskervville", serif;
 }
 .felsorolas li{
-  font-style: italic;
+font-style: italic;
 }
 article.viragvalasztek{
-  flex:1 1 100%;
+flex:1 1 100%;
 }
 
 
 /*Rólunk és Történetünk*/
 article.rolunk{
-  flex: 1 1 100%;
-  padding:20px;
-  font-family: "Cormorant Garamond";
-  font-size: 21px;
+flex: 1 1 100%;
+padding:20px;
+font-size: 21px;
 }
 
 article.tortenetunk{
-  flex: 1 1 100%;
-  padding: 20px;
-  font-family: "Cormorant Garamond";
-  font-size: 21px;
+flex: 1 1 100%;
+padding: 20px;
+font-size: 21px;
 }
 
 
 
 /*Szolgáltatásaink */
 aside {
-    padding: 10px;
-    background-color: rgb(195, 212, 155);
-    color: rgb(0, 65, 22);
-    flex: 1 1 100%;
-    font-size: 22px;
-    font-family: "Baskervville";
+  padding: 10px;
+  background-color: rgb(195, 212, 155);
+  color: rgb(0, 65, 22);
+  flex: 1 1 100%;
+  font-size: 22px;
+  font-family: "Baskervville", serif;
 }
 
 aside li{
-  list-style-type: circle;
+list-style-type: circle;
 }
 
 
@@ -216,462 +216,308 @@ aside li{
 
 /*Rendelés */
 .rendeles{
-  padding:20px;
-  font-family: "Cormorant Garamond";
-  font-size: 21px;
-  color:  rgb(57, 78, 7);
+padding:20px;
+font-size: 21px;
+color:  rgb(57, 78, 7);
 }
-.araink{
-  text-align: center;
-  font-size: 19px;
 
+.cimkozep{
+text-align: center;
 }
-.arank h3{
-  border: 1px black solid;
-}
+
 .csokor{
-  flex: 1 1 100%;
-  background-color: rgb(253, 219, 225);
-  color: rgb(107, 28, 41);
-  padding: 30px;
-  margin: 0 4px 4px 4px;
-  font-size: 19px;
+flex: 1 1 100%;
+background-color: rgb(253, 219, 225);
+color: rgb(107, 28, 41);
+padding: 30px;
+margin: 0 4px 4px 4px;
+font-size: 19px;
 }
 
 .arak{
-  flex: 1 1 100%;
-  background-color: rgb(253, 219, 225);
-  color: rgb(107, 28, 41);
-  padding: 30px;
-  margin:0 4px 4px 4px;
-}
-.urlap{
-  margin: 4px;
-  background-color: rgb(195, 212, 155);
-  color: rgb(0, 65, 22);
-  padding: 5px;
+flex: 1 1 100%;
+background-color: rgb(253, 219, 225);
+color: rgb(107, 28, 41);
+padding: 30px;
+margin:0 4px 4px 4px;
 }
 
+.urlap{
+margin: 4px;
+background-color: rgb(195, 212, 155);
+color: rgb(0, 65, 22);
+padding: 5px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.adatok{
+flex: 1 1 100%;
+font-size: 19px;
+}
+.csokoradatok{
+flex: 1 1 100%;
+font-size: 19px;
+}
+
+.gomb{
+background-color: rgb(57, 78, 7);
+color:pink;
+border: 1px rgb(0, 0, 0) solid;
+}
+input{
+background-color: rgb(250, 231, 234);
+}
+input[type="checkbox"], input[type="radio"] {
+accent-color: pink; 
+}
 #valasztottkep{
-  width: 300px;
-  margin:2px;
-  border-radius: 10px;
-  border: 2px black solid;
-  display: none;
+width: 300px;
+margin:2px;
+border-radius: 10px;
+border: 2px black solid;
+display: none;
 }
 #fizetendo{
-  font-weight: bold;
+font-weight: bold;
 }
+
+
 
 /*Üzleteink */
 article.uzleteink{
-  flex: 1 1 100%;
-  padding: 30px;
-  margin: 4px;
-  font-size: 19px;
+flex: 1 1 100%;
+padding: 30px;
+margin: 4px;
+font-size: 19px;
 }
 
 article.uzleteink h3{
-  border-top: 1px black solid;
-  padding-top: 8px;
+border-top: 1px black solid;
+padding-top: 8px;
 }
 
 article.uzleteink p{
-  margin: 0;
+margin: 0;
 }
 
 article.nyitvatartas{
-  flex: 1 1 100%;
-  border: 2px solid  rgb(57, 78, 7);
-  border-radius: 15px;
-  margin: 4px;
-  height: fit-content;
-  background-color: pink;
-  padding: 3px;
-  font-size: 20px;
+flex: 1 1 100%;
+border: 2px solid  rgb(57, 78, 7);
+border-radius: 15px;
+margin: 4px;
+height: fit-content;
+background-color: pink;
+padding: 3px;
+font-size: 20px;
 }
 
 
 /*Galéria*/
 .galeria{
-  font-size: 20px;
-  padding:20px;
-  font-family: "Cormorant Garamond";
-  color:  rgb(57, 78, 7);
+font-size: 20px;
+padding:20px;
+color:  rgb(57, 78, 7);
 }
 
 .galeria a{
-  text-decoration: none;
-  color: rgb(57, 78, 7);
+text-decoration: none;
+color: rgb(57, 78, 7);
 }
 
 /*Slide galéria*/
 .slider {
-  width: 80%;
-  min-width: 400px;
-  margin: auto;
+width: 80%;
+min-width: 400px;
+margin: auto;
 }
 .slick-slide {
-  margin: 0px 5px; /*Képek közt*/
+margin: 0px 5px; /*Képek közt*/
 }
 .slick-slide img {
-  width: 100%;
+width: 100%;
 }
 .slick-slider .slick-prev:before,
 .slick-slider .slick-next:before  {
-  color: rgb(57, 78, 7); /*Nyilak*/
+color: rgb(57, 78, 7); /*Nyilak*/
 }
 .slick-slide {
-  transition: all ease-in-out .3s;
-  opacity: .3; /*Legszélső átlátszóság*/
+transition: all ease-in-out .3s;
+opacity: .3; /*Legszélső átlátszóság*/
 }
 .slick-active {
-  opacity: .6; /*Oldalsó átlátszóság*/
+opacity: .6; /*Oldalsó átlátszóság*/
 }
 .slick-current {
-  opacity: 1;
+opacity: 1;
 }
 
 
 
 /*Kapcsolat*/
 .kapcsolat{
-  font-size: 20px;
-  padding:20px;
-  font-family: "Cormorant Garamond";
-  color:  rgb(57, 78, 7);
+font-size: 20px;
+padding:20px;
+color:  rgb(57, 78, 7);
 }
 
 .kapcsolat a{
-  text-decoration: none;
-  color: rgb(0, 0, 66);
+text-decoration: none;
+color: rgb(0, 0, 66);
 }
 .kapcsolat a:hover{
-  color: rgb(112, 19, 34);
+color: rgb(112, 19, 34);
 }
 
 
 /*Footer*/
 footer{
-    background-color: rgb(57, 78, 7);
-    color: rgb(241, 241, 185);
-    font-size: 18px;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    font-family: "Cormorant Garamond";
+  background-color: rgb(57, 78, 7);
+  color: pink;
+  font-size: 18px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: pink 2px solid;
+  
 }
 
-/*footer .oldalrol{
-    display: flex;
-    justify-content: flex-end;
-    align-items: right;
-    text-align: right;
-}
 
-footer .sm{
-    margin-right: 20px;
-    display:flex;
-}
-
-footer ul{
-    list-style-type: none;
-}
-
-footer li a:link, footer li a:visited{
-    text-decoration:none;
-    color: rgb(241, 241, 185);
-}
-footer li a:hover{
-    background-color:rgb(241, 241, 185);
-    color: rgb(57, 78, 7);
-}*/
 
 .felkover{
-  font-weight: bold;
+font-weight: bold;
 }
 .dolt{
-  font-style: italic;
+font-style: italic;
 }
 
 @media all and (min-width: 600px) {
-    /*tablet*/
-    /*hamburger nélküli menü */
-    #hamburger-icon {
-      display: none;
-    }
+  /*tablet*/
+  /*hamburger nélküli menü */
+  #hamburger-icon {
+    display: none;
+  }
 
-    header nav{
-      margin: 0;
-      /*padding: 10px;*/
-      display: flex;
-      align-items: center;
-    }
+  header nav{
+    margin: 0;
+    /*padding: 10px;*/
+    display: flex;
+    align-items: center;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul li{
+    padding:0 4px;
+    border-right: 1px solid white;
+    font-family: "Playfair Display",serif;
+    font-size:13px;
+    /*margin-left: 10px;*/
+  }
+#kapcs{
+    border-right-width: 0;
+  }
+
+  header nav li a:link, nav li a:visited{
+  text-decoration: none;
+  color:white;
+  }
   
-    header nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
+  header nav ul li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  
+  header nav ul li a:hover{
+  color:pink;
+  }
+  
+  /*1. szövegek */
+  article.viragvalasztek{
+    order:1;
+  }
+  aside{
+      flex-basis: 50%;
+      order:3;
+  }
+  article.rolunk{
+      flex-basis: 50%;
+      order:2;
+  }
+  article.tortenetunk{
+    order:5;
+  }
+  .parallax2{
+    order: 4;
+  }
+
+  /*2. szövegek*/
+  .csokor{
+    flex-basis: 48%;
+  }
+  .arak{
+    flex-basis: 48%;
+  }
+  .adatok{
+    flex-basis: 40%;
+  }
+.csokoradatok{
+    flex-basis: 40%;
+  }
+
+
+  /*3. szövegek */
+  article.uzleteink{
+    flex-basis: 68%;
+  }
+  article.nyitvatartas{
+    flex-basis: 28%;
+  }
+
+
+
+  footer{
       justify-content: space-around;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  
-    header nav ul li{
-      padding:0 4px;
-      border-right: 1px solid white;
-      font-family: "Playfair Display",serif;
-      font-size:13px;
-      /*margin-left: 10px;*/
-    }
-  #kapcs{
-      border-right-width: 0;
-    }
-
-    header nav li a:link, nav li a:visited{
-    text-decoration: none;
-    color:white;
-    }
-    
-    header nav ul li:hover{
-      transform: scale(1.1);
-      transition: 0.3s;
-    }
-    
-    header nav ul li a:hover{
-    color:pink;
-    }
-    
-    /*1. szövegek */
-    article.viragvalasztek{
-      order:1;
-    }
-    aside{
-        flex-basis: 50%;
-        order:3;
-    }
-    article.rolunk{
-        flex-basis: 50%;
-        order:2;
-    }
-    article.tortenetunk{
-      order:5;
-    }
-    .parallax2{
-      order: 4;
-    }
-
-    /*2. szövegek*/
-    .csokor{
-      flex-basis: 48%;
-    }
-    .arak{
-      flex-basis: 48%;
-    }
-
-
-    /*3. szövegek */
-    article.uzleteink{
-      flex-basis: 68%;
-    }
-    article.nyitvatartas{
-      flex-basis: 28%;
-    }
-
-    /*nav ul li{
-        list-style-type: none;
-        float: left;
-        width: 20%;
-        margin: 0;
-        padding: 3px;
-        text-align: center;
-    }*/
-
-    footer{
-        justify-content: space-around;
-    }
+  }
 }
 
 @media all and (min-width: 768px) {
-    /*számítógép*/
-    header nav ul li{
-      font-size: 15px;
-    }
+  /*számítógép*/
+  header nav ul li{
+    font-size: 15px;
+  }
 
 
-    article.rolunk{
-      flex-basis: 100%;
-      order:3;
-    }
+  article.rolunk{
+    flex-basis: 100%;
+    order:3;
+  }
 
-    article.viragvalasztek{
-      order:1;
-      flex-basis: 50%;
-    }
+  article.viragvalasztek{
+    order:1;
+    flex-basis: 50%;
+  }
 
-    article.tortenetunk{
-      order:5;
-    }
-    aside{
-      order:2;
-      flex-basis: 50%;
-    }
-    .parallax2{
-      order:4;
-    }
+  article.tortenetunk{
+    order:5;
+  }
+  aside{
+    order:2;
+    flex-basis: 50%;
+  }
+  .parallax2{
+    order:4;
+  }
 }
 
-
-
-/* parallax
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parallax Scrolling</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .parallax {
-      background-image: url('your-image.jpg');
-      height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .content {
-      height: 100vh;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="parallax"></div>
-  <div class="content">
-    <h1>Scroll Down</h1>
-    <p>Here is some content.</p>
-  </div>
-  <div class="parallax"></div>
-
-</body>
-</html>
-
-
-*/
-
-/*
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Virágbolt</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Virágbolt</h1>
-    <label class="switch">
-      <input type="checkbox" id="theme-toggle">
-      <span class="slider"></span>
-    </label>
-  </header>
-
-  <main>
-    <p>Üdvözöljük a virágboltban!</p>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
- Alapstílusok 
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-Dark Mode stílusok 
-  body.dark-mode {
-    background-color: #121212;
-    color: #f5f5f5;
-  }
-  
- Kapcsoló stílusai 
-  .switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .switch input {
-    display: none;
-  }
-  
-  .slider {
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .slider::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: white;
-    border-radius: 50%;
-    top: 1px;
-    left: 1px;
-    transition: transform 0.3s;
-  }
-  
-  input:checked + .slider {
-    background-color: #66bb6a;
-  }
-  
-  input:checked + .slider::before {
-    transform: translateX(20px);
-  }
-  
-*/
-
-/*
-// script.js
-const toggleSwitch = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Ellenőrizzük a tárolt beállítást (ha van)
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-  toggleSwitch.checked = true;
-}
-
-// Kapcsoló eseményfigyelő
-toggleSwitch.addEventListener('change', () => {
-  if (toggleSwitch.checked) {
-    body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark'); // Tárolás a helyi tárban
-  } else {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
-  }
-});
-
-*/
