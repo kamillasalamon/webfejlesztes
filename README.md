@@ -2,7 +2,7 @@
 Salamon Kamilla Ágnes
 
 2. Github link:
-
+https://kamillasalamon.github.io/webfejlesztes/
 
 3. Weboldalam témája:
 Weboldalamat egy kitalált virágboltról csináltam. A szöveget ChatGPT segítségével csináltam, a képek szabadon felhasználhatóak. 
