@@ -79,7 +79,7 @@ function csokormutat(){
 
     const valasztott=document.getElementById("csokorfajta").value
     if (valasztott==`alap`){
-        alert(`Válassz ki egy csokrot!`);
+        //alert(`Válassz ki egy csokrot!`);
         kep.src=``
         kep.alt=`Nincs kiválasztott kép`
     }

@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Salamon Kamilla">
+    <meta name="description" content="Rendelés oldala">
     <link rel="stylesheet" href="style.css">
     <title>Magnólia virágbolt</title>
     <link rel="icon" href="kepek/logo/korlogojo.png" type="image/x-icon">
     
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Baskervville:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--Jquery-->
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="jquery/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
     
 </head>
 <body>
@@ -93,7 +94,7 @@
         </ol></div>
 
         <div class="arak">
-        <p>Alapárak:
+        Alapárak:
             <ul>
                 <li>S méret, 8 szál virág: 1000Ft </li>
                 <li>M méret, 12 szál virág: 1400Ft</li>
@@ -115,7 +116,9 @@
             <li>Masni a csokor köré: 200 Ft</li>
             <li>Kabala maci: 900 Ft</li>
             <li>Héliumos lufi: 800 Ft</li>
-        </ul></p></div>
+        </ul>
+
+    </div>
     </div>
 
     </article>
@@ -124,49 +127,52 @@
 
 
 
-<form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+<form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="viragform" novalidate>
 
 <div class="urlap">
 
 <div class="adatok">
+    <h3>Adatok</h3>
     <p><label>
-        <span class="felkover">Milyen névre rendeled a csokrot?</span><br>
-        <input type="text" size="20px" name="nev">
+        <span class="felkover">1. Milyen névre rendeled a csokrot?</span> (kötelező)<br>
+        <input type="text" size="20" name="nev" placeholder="Cserepes Virág">
     </label></p>
    
     <p><label>
-        <span class="felkover">Mikorra készítsük el a csokrod?</span><br>
+        <span class="felkover">2. Mikorra készítsük el a csokrod?</span> (kötelező)<br>
         <input type="date" name="datum">
     </label></p>
 
     <p><label>
-        <span class="felkover">Telefonszámod:</span><br>
-        <input type="tel" name="telszam" size="20px">
+        <span class="felkover">3. Telefonszámod:</span><br>
+        <input type="tel" name="telszam" size="20" placeholder="+36 12 345 6789">
     </label></p>
 
     <p><label>
-        <span class="felkover">E-mail címed:</span><br>
-        <input type="email" name="emailcim" size="20px">
+        <span class="felkover">4. E-mail címed:</span> (kötelező)<br>
+        <input type="email" name="emailcim" size="20" placeholder="viragcserepes@gmail.com">
     </label></p>
 
-    <p><span class="felkover">Hova kéred a csokrot?</span><br>
+    <p><span class="felkover">5. Hova kéred a csokrot?</span> (kötelező)<br>
         <label><input type="radio" name="szallitas" value="boltban">Boltban átveszem</label><br>
         <label><input type="radio" name="szallitas" value="hazhoz" id="hazhozszall">Házhozszállítást kérek (+1200Ft)
         </label>
+        <span id="szallitasError"></span>
     </p>
 
     <p><label>
-        <span class="felkover">Házhozszállítás esetén cím:</span><br>
-        <input type="text" size="20" name="cim">
+        <span class="felkover">6. Házhozszállítás esetén cím:</span> (házhozszállítás esetén kötelező)<br>
+        <input type="text" size="35" name="cim" placeholder="1145 Budapest, Tulipán tér 8.">
     </label></p>
 </div>
 
 
 <div class="csokoradatok">
+    <h3>A virágcsokorról</h3>
     <p><label>
-        <span class="felkover">Milyen csokorméretet szeretnél?</span>
+        <span class="felkover">7. Milyen csokorméretet szeretnél?</span>
         <select name="meret" id="meretfajta">
-            <option value="s">S (1000 Ft)</option>
+            <option value="s" selected="selected">S (1000 Ft)</option>
             <option value="m">M (1400 Ft)</option>
             <option value="l">L (1800 Ft)</option>
             <option value="xl">XL (2000 Ft)</option>
@@ -174,7 +180,7 @@
     </label></p>
 
     <p><label>
-        <span class="felkover">Milyen fajta csokrot szeretnél?</span>
+        <span class="felkover">8. Milyen fajta csokrot szeretnél?</span> (kötelező)
         <select name="csokor" id="csokorfajta">
             <option value="alap">-- Válassz egyet --</option>
             <option value="1">Klasszikus romatnikus csokor</option>
@@ -189,26 +195,31 @@
     <img src="" alt="Választott csokorfajta kép" id="valasztottkep">
 
     <p><label>
-        <span class="felkover">Milyen csomagolót szeretnél?</span>
+        <span class="felkover">9. Milyen csomagolót szeretnél?</span>
         <select name="csomag" id="csomagolo">
-           <option value="p">Egyszerű papírcsomagoló</option>
+           <option value="p" selected="selected">Egyszerű papírcsomagoló</option>
             <option value="s">Elegáns selyempapír</option>
-            <option value="a">Átlátszó modern csomagoló</option>
+            <option value="a" >Átlátszó modern csomagoló</option>
         </select>
     </label></p>
 
     <p><label>
-        <span class="felkover">Milyen színű szallaggal szeretnéd megkötni a virágod?</span>
-        <input type="color">
+        <span class="felkover">10. Milyen színű szalaggal szeretnéd megkötni a virágod?</span>
+        <input type="color" name="szalagszin">
     </label></p>
 
     <p>
-        <span class="felkover">Milyen díszt szeretnél a csokrodba vagy a csokrod mellé?</span><br>
+        <span class="felkover">11. Milyen kiegészítőt szeretnél a csokrodba vagy a csokrod mellé?</span><br>
         <label><input type="checkbox" name="fel" id="felirat">Felirat<br></label>
         <label><input type="checkbox" name="mas" id="masni">Masni<br></label>
         <label><input type="checkbox" name="mac" id="maci">Kabala maci<br></label>
         <label><input type="checkbox" name="luf" id="lufi">Héliumos lufi</label>
     </p>
+
+    <p><label>
+        <span class="felkover">12. Egyéb megjegyzés:</span><br>
+        <textarea name="egyeb" rows="4" cols="32"></textarea>
+    </label></p>
 
 
     <p>
@@ -227,10 +238,59 @@
 
     <footer>
         <p>Az oldal nem valóságos, tanulmányi célú</p>
-        <p>Salamon Kamilla, 2024</p>
+        <p>© Salamon Kamilla, 2024</p>
     </footer>
 
     <script src="index.js"></script>
+   
+
+    <script>
+        $(document).ready(function(){
+
+        $.validator.addMethod("haHazhoz", function (value, element) {
+                const szallitasValue = $("input[name='szallitas']:checked").val();
+                return szallitasValue !== "hazhoz" || value.trim() !== "";
+        }, "<br>A cím megadása kötelező házhoz szállítás esetén.");
+
+        $.validator.addMethod("nemAlap", function (value, element) {
+                return value !== "alap"; 
+            }, "<br>Kérjük, válassz egy csokrot!");
+
+        $("#viragform").validate({
+            rules:{
+                nev: "required",
+                datum: "required",
+                emailcim:{
+                    required: true,
+                    email: true
+                },
+                szallitas: "required",
+                cim: {
+                    haHazhoz: true
+                },
+                csokor: {
+                        nemAlap: true 
+                    }
+            },
+            messages:{
+                nev: "<br>Kötelező mező, írd be a neved!",
+                datum: "<br>Kötelező mező, írd be a dátumot!",
+                emailcim: "<br>Kötelező mező, írj be létező e-mail címed!",
+                szallitas: "<br>Kötelező mező, válaszd ki a számodra megfelelőt!"
+            },
+            errorPlacement: function (error, element) {
+                    if (element.attr("name") === "szallitas") {
+                        error.appendTo("#szallitasError");
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }
+
+        });
+        });
+        </script>
+
+
 </body>
 </html>
 
